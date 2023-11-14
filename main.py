@@ -6,6 +6,7 @@ import os
 app = Flask(__name__)
 client = bigquery.Client()
 
+# Added comment to trigger cloud build on Git push
 @app.route('/')
 def main(big_query_client=client):
     table_id = "udemy-mlops-405021.test_schema.us_states"
